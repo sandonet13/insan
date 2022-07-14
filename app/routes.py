@@ -89,9 +89,7 @@ class HelloWorldParameter(Resource):
     def get(self):
         return UserController.sign_out()
 
-# @app.route("/logout")
-# def signout():
-#     return UserController.sign_out()
+
 
 @api.route('/hello')
 class HelloWorld(Resource):
