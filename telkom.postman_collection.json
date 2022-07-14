@@ -1,0 +1,691 @@
+{
+	"info": {
+		"_postman_id": "c574e097-94a5-41b7-8b0b-75732b4346f0",
+		"name": "telkom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"johndoe@gmail.com\",\r\n    \"password\" : \"johndoe666\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://45.76.152.196:5000/login",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login + JWT Token"
+			},
+			"response": [
+				{
+					"name": "http://45.76.152.196:5000/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"johndoe@gmail.com\",\r\n    \"password\" : \"johndoe666\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://45.76.152.196:5000/login",
+							"protocol": "http",
+							"host": [
+								"45",
+								"76",
+								"152",
+								"196"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.8.10"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Jul 2022 05:53:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1181"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"\",\n    \"values\": {\n        \"data\": {\n            \"email\": \"johndoe@gmail.com\",\n            \"id\": 4,\n            \"no_telp\": \"08565644544\",\n            \"roles\": \"Contributor\",\n            \"user_id_telegram\": \"@johndoe\",\n            \"username\": \"johndoe123\"\n        },\n        \"token_access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3Nzc4MDM3LCJqdGkiOiJmY2YxMmVmMS1iYTY2LTQ4ZmItOWM2ZS0zYTc1YmVhZGM5MzUiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzgwMzcsImV4cCI6MTY1Nzg2NDQzN30.WH2h0YzlhM0aDTih8uj-PIGNP5mHkLtmJGZs6mOhpos\",\n        \"token_refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY1Nzc3ODAzNywianRpIjoiNGJlODcxZDktYmI2OC00ZjVlLWFmODYtMDI3OGJmMmFiZWFlIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOnsiaWQiOjQsInVzZXJuYW1lIjoiam9obmRvZTEyMyIsImVtYWlsIjoiam9obmRvZUBnbWFpbC5jb20iLCJyb2xlcyI6IkNvbnRyaWJ1dG9yIiwibm9fdGVscCI6IjA4NTY1NjQ0NTQ0IiwidXNlcl9pZF90ZWxlZ3JhbSI6IkBqb2huZG9lIn0sIm5iZiI6MTY1Nzc3ODAzNywiZXhwIjoxNjU4MDM3MjM3fQ.w7e-7IO7TcOu2K3q3xTIXOH-ybKNBjeu5O0LKF8bon0\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://45.76.152.196:5000/users",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				},
+				"description": "All Users"
+			},
+			"response": [
+				{
+					"name": "Get All Users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://45.76.152.196:5000/users",
+							"protocol": "http",
+							"host": [
+								"45",
+								"76",
+								"152",
+								"196"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.8.10"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 14 Jul 2022 06:05:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1493"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"\",\n    \"values\": [\n        {\n            \"email\": \"cooper131@gmail.com\",\n            \"id\": 2,\n            \"no_telp\": \"08124545124\",\n            \"profiles\": [\n                {\n                    \"alamat\": \"Jl. Wijaya No. 23 Jakarta Selatan\",\n                    \"foto_profil\": \"https://thumb.viva.co.id/media/frontend/thumbs3/2020/07/17/5f11a2b26f625-reza-darmawangsa_1265_711.jpeg\",\n                    \"id\": 0,\n                    \"kategori\": \"Mikro\",\n                    \"kategori_influencer\": \"Youtuber\",\n                    \"nama_lengkap\": \"Jane Hooper\",\n                    \"social_media\": {\n                        \"facebook_link\": \"https://www.facebook.com/RZD-1841680799458709/\",\n                        \"instagram_link\": \"https://www.instagram.com/rezadarmawangsa\",\n                        \"tiktok_link\": \"https://www.tiktok.com/@rzdarmawangsa\",\n                        \"twitter_link\": \"https://twitter.com/tvindonesiawkwk\",\n                        \"youtube_link\": \"https://www.youtube.com/c/RZDarmawangsa\"\n                    },\n                    \"user_id\": 2\n                }\n            ],\n            \"roles\": \"Supervisor\",\n            \"user_id_telegram\": \"@cooper131\",\n            \"username\": \"cooper131\"\n        },\n        {\n            \"email\": \"anjay131@gmail.com\",\n            \"id\": 3,\n            \"no_telp\": \"0812454545\",\n            \"profiles\": [],\n            \"roles\": \"Contributor\",\n            \"user_id_telegram\": \"@anjay13\",\n            \"username\": \"Anjay\"\n        },\n        {\n            \"email\": \"johndoe@gmail.com\",\n            \"id\": 4,\n            \"no_telp\": \"08565644544\",\n            \"profiles\": [],\n            \"roles\": \"Contributor\",\n            \"user_id_telegram\": \"@johndoe\",\n            \"username\": \"johndoe123\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Read Users by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://45.76.152.196:5000/users/2",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"loremipsum\",\r\n    \"roles\" : \"Moderator\",\r\n    \"email\" : \"loremipsum@gmail.com\",\r\n    \"no_telp\" : \"08122122455\",\r\n    \"user_id_telegram\" : \"@loremipsum\",\r\n    \"password\" : \"loremipsum1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://45.76.152.196:5000/users",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"loremipsum212\",\r\n    \"roles\" : \"Moderator\",\r\n    \"email\" : \"loremipsum@gmail.com\",\r\n    \"no_telp\" : \"08122122455\",\r\n    \"user_id_telegram\" : \"@loremipsum\",\r\n    \"password\" : \"loremipsum1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://45.76.152.196:5000/users/6",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://45.76.152.196:5000/users/5",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Profile User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://45.76.152.196:5000/profile?user_id=2",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"profile"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Profile for User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\" : 6,\r\n    \"foto_profil\" : \"http://google.com/image/foto.jpg\",\r\n    \"nama_lengkap\" : \"Lorep Ipsum Lengkap Sekali\",\r\n    \"alamat\" : \"Jl. Mojokerto Gang Bakti No. 20\",\r\n    \"kategori\" : \"Makro\",\r\n    \"kategori_influencer\" : \"Celebgram\",\r\n    \"instagram\" : \"0\",\r\n    \"instagram_link\" : \"\",\r\n    \"twitter\" : \"0\",\r\n    \"twitter_link\" : \"\",\r\n    \"facebook\" : \"0\",\r\n    \"facebook_link\" : \"\",\r\n    \"tiktok\" : \"0\",\r\n    \"tiktok_link\" : \"\",\r\n    \"youtube\" : \"0\",\r\n    \"youtube_link\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://45.76.152.196:5000/profile",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_lengkap\" : \"Lorep Ipsum Lengkap Sekali Updated 2\",\r\n    \"foto_profil\" : \"http://google.com/image/foto.jpg\",\r\n    \"alamat\" : \"Jl. Mojokerto Gang Bakti No. 20\",\r\n    \"kategori\" : \"Makro\",\r\n    \"kategori_influencer\" : \"Celebgram\",\r\n    \"instagram\" : \"0\",\r\n    \"instagram_link\" : \"\",\r\n    \"twitter\" : \"0\",\r\n    \"twitter_link\" : \"\",\r\n    \"facebook\" : \"0\",\r\n    \"facebook_link\" : \"\",\r\n    \"tiktok\" : \"0\",\r\n    \"tiktok_link\" : \"\",\r\n    \"youtube\" : \"0\",\r\n    \"youtube_link\" : \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://45.76.152.196:5000/profile/3",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"profile",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://45.76.152.196:5000/profile/3",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"profile",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Campaign by User ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://45.76.152.196:5000/campaign?user_id=2",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"campaign"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Campaign",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 6,\r\n    \"nama_campaign\": \"Internet Pro Max\",\r\n    \"status_campaign\": \"Waiting Approval\",\r\n    \"type_campaign\": \"Online Campaigne\",\r\n    \"phase_campaign\": \"Planning\",\r\n    \"start_date\": \"2022-07-01 00:18:11\",\r\n    \"end_date\": \"2022-07-01 00:18:11\",\r\n    \"product_campaign\": \"Online\",\r\n    \"tasks\": \"Upload Twitter\",\r\n    \"id_socmed\": 4,\r\n    \"publish_plan\": \"2022-07-01 00:18:11\",\r\n    \"caption\": \"Online\",\r\n    \"tag_people\": \"@Wow\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://45.76.152.196:5000/campaign",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"campaign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Campaign",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nama_campaign\": \"Paket Internet Unlimited\",\r\n    \"status_campaign\": \"Waiting Approval\",\r\n    \"type_campaign\": \"Online Campaigne\",\r\n    \"phase_campaign\": \"Planning\",\r\n    \"start_date\": \"2022-07-01 00:18:11\",\r\n    \"end_date\": \"2022-07-01 00:18:11\",\r\n    \"product_campaign\": \"Online\",\r\n    \"tasks\": \"Upload Tiktok\",\r\n    \"id_socmed\": 4,\r\n    \"publish_plan\": \"2022-07-01 00:18:11\",\r\n    \"caption\": \"Online\",\r\n    \"tag_people\": \"@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://45.76.152.196:5000/campaign/6",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"campaign",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Campaign",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://45.76.152.196:5000/campaign/6",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"campaign",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6dHJ1ZSwiaWF0IjoxNjU3NzczMTE2LCJqdGkiOiJiYzM5Nzk3NS1iODM3LTRjMzYtODZlYS0yZWJjZDVhY2I4MjIiLCJ0eXBlIjoiYWNjZXNzIiwic3ViIjp7ImlkIjo0LCJ1c2VybmFtZSI6ImpvaG5kb2UxMjMiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZXMiOiJDb250cmlidXRvciIsIm5vX3RlbHAiOiIwODU2NTY0NDU0NCIsInVzZXJfaWRfdGVsZWdyYW0iOiJAam9obmRvZSJ9LCJuYmYiOjE2NTc3NzMxMTYsImV4cCI6MTY1Nzg1OTUxNn0.9wX7JfPir57voq1PADvhRURV1juvQcucRCIV3lfHwE0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://45.76.152.196:5000/logout",
+					"protocol": "http",
+					"host": [
+						"45",
+						"76",
+						"152",
+						"196"
+					],
+					"port": "5000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
